@@ -69,14 +69,14 @@ class Doppelgangers(BaseStereoViewDataset):
                             osp.join(self.ROOT, 'visymscenes', pair[1]),
                             int(pair[2])
                         ])
-                    elif 'doppelgangers' in metadata:
+                    else: #if 'doppelgangers' in metadata:
                         self.all_pairs.append([
                             osp.join(self.ROOT, 'doppelgangers', 'images', meta_to_image[metadata], pair[0]), 
                             osp.join(self.ROOT, 'doppelgangers', 'images', meta_to_image[metadata], pair[1]),
                             pair[2]
                         ])  
-                    else:
-                        pass 
+                    #else:
+                    #    pass 
 
             np.random.shuffle(self.all_pairs)
         else:
@@ -93,14 +93,14 @@ class Doppelgangers(BaseStereoViewDataset):
                             osp.join(self.ROOT, 'visymscenes', pair[1]),
                             int(pair[2])
                         ])
-                    elif 'doppelgangers' in metadata:
+                    else: #'doppelgangers' in metadata:
                         self.all_pairs.append([
                             osp.join(self.ROOT, 'doppelgangers', 'images', meta_to_image[metadata], pair[0]), 
                             osp.join(self.ROOT, 'doppelgangers', 'images', meta_to_image[metadata], pair[1]),
                             pair[2]
                         ])
-                    else:
-                        pass
+                    #else:
+                    #    pass
                         
             np.random.shuffle(self.all_pairs)
 
